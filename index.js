@@ -27,7 +27,7 @@ app.route('/api/:id').get((req, res) => {
   const user = users.find(user => Number(user.id) === Number(userId))
 
   if (!user) {
-    return res.json('User nor found!')
+    return res.json('User not found!')
   }
 
   res.json(user)
@@ -50,7 +50,7 @@ app.route('/api/:id').put((req, res) => {
   const user = users.find(user => Number(user.id) === Number(userId))
 
   if (!user) {
-    return res.json('User nor found!')
+    return res.json('User not found!')
   }
 
   const updatedUser = {
